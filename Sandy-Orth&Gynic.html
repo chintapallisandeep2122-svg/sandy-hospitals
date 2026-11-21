@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sandy Ortho and Gynic – Book OP on WhatsApp</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Figtree:wght@400;600&display=swap">
+<style>
+:root{--bg:#f7f9fb;--panel:#fff;--ink:#14212b;--dim:#52626f;--line:#d8e0e7;--ortho:#1d5f8c;--gyn:#a02f66;--on:#fff;--warn:#fff3d6;--warnInk:#5a3d00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d151c;--panel:#142029;--ink:#e9f0f5;--dim:#a2b3c0;--line:#27394a;--ortho:#5fb0e6;--gyn:#f08ab8;--on:#0d151c;--warn:#3a2d0a;--warnInk:#ffe3a0}}
+:root[data-theme="dark"]{--bg:#0d151c;--panel:#142029;--ink:#e9f0f5;--dim:#a2b3c0;--line:#27394a;--ortho:#5fb0e6;--gyn:#f08ab8;--on:#0d151c;--warn:#3a2d0a;--warnInk:#ffe3a0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px}
+header{padding:30px 0 10px}
+.brand{font:800 clamp(28px,6vw,46px)/1.1 Fraunces,Georgia,serif;margin:0 0 8px}
+.tag{color:var(--dim);margin:0 0 6px;max-width:52ch}
+.alert{background:var(--warn);color:var(--warnInk);border-radius:8px;padding:10px 14px;margin:16px 0;font-size:15px}
+.depts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:22px 0 10px}
+.dept{text-align:left;font:inherit;color:var(--ink);background:var(--panel);border:2px solid var(--line);border-radius:12px;padding:20px;cursor:pointer;border-top:8px solid var(--c)}
+.dept h2{font-size:24px;color:var(--c);margin-bottom:6px}
+.dept p{margin:0 0 10px;color:var(--dim)}
+.dept span{font-weight:600;color:var(--c)}
+.dept[aria-pressed="true"]{border-color:var(--c)}
+.o{--c:var(--ortho)}.g{--c:var(--gyn)}
+section{padding:26px 0}
+#book{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#book h2{font-size:28px;color:var(--c);margin-bottom:6px}
+form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+label{display:grid;gap:4px;font-weight:600;font-size:15px}
+input,select,textarea{font:inherit;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);width:100%}
+.full{grid-column:1/-1}
+.send{background:var(--c);color:var(--on);font:600 18px Figtree,sans-serif;border:0;border-radius:8px;padding:14px 24px;cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--c);outline-offset:2px}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.info div{border-left:4px solid var(--line);padding-left:14px}
+.info h3{font-size:19px;margin-bottom:4px}
+.info p{margin:0;color:var(--dim)}
+.note{font-size:14px;color:var(--dim)}
+footer{padding:26px 0 40px;color:var(--dim);font-size:15px}
+.logo-row{display:flex;align-items:center;gap:14px;margin:0 0 10px}
+.logo{width:68px;height:68px;flex:none;border-radius:50%;box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--line)}
+.logo-row .brand{margin:0}
+header{border-bottom:6px double var(--ortho)}
+.dept{box-shadow:0 0 0 4px var(--bg),0 0 0 6px var(--c)}
+.dept:hover{transform:translateY(-2px)}
+form{border:2px double var(--c);border-radius:12px;padding:16px}
+.info div{border:1px solid var(--line);border-left:5px solid var(--c,var(--ortho));border-radius:8px;padding:12px 14px;background:var(--panel)}
+.info div:nth-child(2){--c:var(--gyn)}
+footer{border-top:6px double var(--gyn);margin-top:10px}
+.alert{border:2px dashed var(--warnInk)}
+body{background:linear-gradient(180deg,var(--bg),var(--panel) 60%,var(--bg))}
+header{background:linear-gradient(120deg,color-mix(in srgb,var(--ortho) 16%,var(--bg)),color-mix(in srgb,var(--gyn) 16%,var(--bg)));padding-bottom:22px}
+.brand{background:linear-gradient(90deg,var(--ortho),var(--gyn));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.logo-row{animation:rise .6s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.badges{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0}
+.badges li{background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:4px 14px;font-size:14px;font-weight:600}
+.dept{border-radius:16px;box-shadow:0 0 0 4px var(--bg),0 0 0 6px var(--c),0 12px 24px color-mix(in srgb,var(--c) 22%,transparent);transition:transform .2s}
+.dept::before{display:block;font-size:34px;margin-bottom:8px}
+.dept.o::before{content:"🦴"}
+.dept.g::before{content:"🌸"}
+.dept span::after{content:" >"}
+.send{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 68%,#000));box-shadow:0 8px 16px color-mix(in srgb,var(--c) 32%,transparent);border-radius:12px;transition:transform .15s}
+.send:active{transform:scale(.98)}
+.out .cp{box-shadow:none;background:transparent}
+form{background:color-mix(in srgb,var(--c) 5%,var(--panel));border-radius:16px;box-shadow:0 10px 26px color-mix(in srgb,var(--c) 14%,transparent)}
+input,select,textarea{border-radius:10px;border-width:1.5px}
+input:focus,select:focus,textarea:focus{border-color:var(--c)}
+.steps li{border-radius:99px}
+#book h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;background:var(--c);margin-top:8px}
+.info div{box-shadow:0 6px 14px color-mix(in srgb,var(--ortho) 10%,transparent)}
+footer{background:linear-gradient(120deg,color-mix(in srgb,var(--ortho) 12%,var(--bg)),color-mix(in srgb,var(--gyn) 12%,var(--bg)))}
+@media(prefers-reduced-motion:reduce){.logo-row{animation:none}.dept,.send{transition:none}}
+[hidden]{display:none!important}
+.steps{display:flex;gap:6px;list-style:none;padding:0;margin:0 0 14px;font-size:13px}
+.steps li{flex:1;text-align:center;padding:6px 4px;border-radius:6px;background:var(--bg);color:var(--dim);border:1px solid var(--line)}
+.steps li[aria-current="step"]{background:var(--c);color:var(--on);border-color:var(--c);font-weight:600}
+.out{margin-top:20px;border:2px solid var(--c);border-radius:10px;padding:16px;display:grid;gap:12px}
+.out h3{font-size:20px}.out p{margin:0}
+a.wa{display:block;text-align:center;text-decoration:none}
+.out .cp{background:transparent;color:var(--c);border:2px solid var(--c)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <div class="logo-row">
+  <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="Sandy Ortho and Gynic logo"><defs><clipPath id="lc"><circle cx="32" cy="32" r="31"/></clipPath></defs><g clip-path="url(#lc)"><rect width="32" height="64" fill="#1d5f8c"/><rect x="32" width="32" height="64" fill="#a02f66"/></g><g fill="#fff"><rect x="14" y="16" width="4" height="32"/><circle cx="12.5" cy="16" r="4.5"/><circle cx="19.5" cy="16" r="4.5"/><circle cx="12.5" cy="48" r="4.5"/><circle cx="19.5" cy="48" r="4.5"/></g><g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"><circle cx="46" cy="26" r="8"/><path d="M46 34V52M39 44H53"/></g><line x1="32" y1="2" x2="32" y2="62" stroke="#fff" stroke-width="1.5"/></svg>
+  <h1 class="brand">Sandy Ortho and Gynic</h1>
+ </div>
+ <p class="tag">Book your OP visit in two minutes. Pick the department, fill in the form, and send it to us on WhatsApp. We will confirm your slot by message.</p>
+ <ul class="badges"><li>Book in 2 minutes</li><li>OP fee ₹1</li><li>Reply on WhatsApp</li></ul>
+ <div class="alert">For emergencies such as heavy bleeding, severe injury or labour pain, call us or come to the hospital straight away. Do not wait for a WhatsApp reply.</div>
+ <div class="depts">
+  <button class="dept o" type="button" data-d="Orthopedic" aria-pressed="true"><h2>Orthopedic OP</h2><p>Bones, joints, spine, fractures and sports injuries.</p><span>Book orthopedic OP</span></button>
+  <button class="dept g" type="button" data-d="Gynecology" aria-pressed="false"><h2>Gynecology OP</h2><p>Pregnancy care, periods, family planning and women's health.</p><span>Book gynecology OP</span></button>
+ </div>
+</div></header>
+
+<section id="book" class="o"><div class="wrap">
+ <ol class="steps" id="steps"><li aria-current="step">1 Your details</li><li>2 Pay ₹1</li><li>3 WhatsApp</li></ol>
+ <h2 id="title">Orthopedic OP booking</h2>
+ <p class="note">Your details are only sent to the hospital on WhatsApp.</p>
+ <form id="f">
+  <label>Patient name<input name="n" required autocomplete="name"></label>
+  <label>Age<input name="a" type="number" min="0" max="120" required></label>
+  <label>Mobile number<input name="m" type="tel" inputmode="tel" required autocomplete="tel"></label>
+  <label>Visit type<select name="t"><option>New patient</option><option>Follow-up visit</option></select></label>
+  <label>Preferred date<input name="d" type="date" required></label>
+  <label>Preferred time<select name="s"><option>Morning</option><option>Evening</option><option>Any time</option></select></label>
+  <label id="oWrap">Problem area<select name="o"><option>Knee</option><option>Back or spine</option><option>Shoulder or neck</option><option>Hip</option><option>Hand or foot</option><option>Fracture or injury</option><option>Other</option></select></label>
+  <label id="gWrap" hidden>Reason for visit<select name="g"><option>Pregnancy checkup</option><option>Periods problem</option><option>Family planning</option><option>White discharge or infection</option><option>Scan or report review</option><option>Other</option></select></label>
+  <label class="full">Tell us a little more (optional)<textarea name="x" rows="3"></textarea></label>
+  <button class="send full" type="submit">Send OP request on WhatsApp</button>
+ </form>
+ <div id="pay" class="out" hidden>
+  <h3>Step 2: pay the OP fee of ₹1</h3>
+  <p>Tap the button to pay ₹1 in your UPI app (PhonePe, Google Pay, Paytm or any other). Or pay manually to UPI ID <b id="upiid"></b>.</p>
+  <button type="button" id="upi" class="send wa">Pay ₹1 with UPI</button>
+  <button type="button" id="cu" class="send cp">Copy UPI ID</button>
+  <label>UPI transaction ID (optional)<input id="utr" inputmode="numeric" autocomplete="off" placeholder="From your payment receipt"></label>
+  <button type="button" class="send" id="paid">I have paid, send request on WhatsApp</button>
+  <button type="button" class="send cp" id="back">Change my details</button>
+  <p id="pm" class="note" role="status"></p>
+ </div>
+ <div id="out" class="out" hidden>
+  <h3>Almost done: send it on WhatsApp</h3>
+  <p>Tap the button below to open WhatsApp, then press send. If WhatsApp does not open, copy the message and send it to <b>+91 84980 89604</b> yourself.</p>
+  <a id="wa" class="send wa" href="#" target="_blank" rel="noopener">Open WhatsApp</a>
+  <textarea id="txt" rows="7" readonly aria-label="Your OP request message"></textarea>
+  <button type="button" class="send cp" id="cp">Copy message</button>
+  <p id="cpm" class="note" role="status"></p>
+ </div>
+</div></section>
+
+<section><div class="wrap info">
+ <div><h3>OP timings</h3><p>Add your timings here, for example morning and evening hours.</p></div>
+ <div><h3>Address</h3><p>Add the hospital address and a landmark.</p></div>
+ <div><h3>Phone</h3><p>+91 84980 89604</p></div>
+</div></section>
+
+<footer><div class="wrap">Sandy Ortho and Gynic, Andhra Pradesh. An OP request is not a confirmed appointment until the hospital replies.</div></footer>
+
+<script>
+(function(){
+ var PHONE="918498089604", dept="Orthopedic", UPI_ID="21222005@axl", pending="";
+ function setStep(n){document.querySelectorAll("#steps li").forEach(function(li,i){if(i===n-1)li.setAttribute("aria-current","step");else li.removeAttribute("aria-current")})}
+ function go(m){
+  var url="https://wa.me/"+PHONE+"?text="+encodeURIComponent(m);
+  document.getElementById("wa").href=url;document.getElementById("txt").value=m;
+  setStep(3);window.location.href=url;
+  setTimeout(function(){if(document.visibilityState==="visible"){var o=document.getElementById("out");o.hidden=false;o.scrollIntoView()}},2500);
+ }
+ var sec=document.getElementById("book"),title=document.getElementById("title"),oW=document.getElementById("oWrap"),gW=document.getElementById("gWrap");
+ var btns=document.querySelectorAll(".dept");
+ function pick(d,scroll){
+  dept=d;var o=d==="Orthopedic";
+  sec.className=o?"o":"g";title.textContent=d+" OP booking";
+  oW.hidden=!o;gW.hidden=o;
+  btns.forEach(function(b){b.setAttribute("aria-pressed",b.dataset.d===d)});
+  try{history.replaceState(null,"","#"+d.toLowerCase())}catch(e){}
+  if(scroll)sec.scrollIntoView();
+ }
+ btns.forEach(function(b){b.addEventListener("click",function(){pick(b.dataset.d,true)})});
+ if(location.hash==="#gynecology")pick("Gynecology",false);
+ var f=document.getElementById("f");
+ document.getElementById("upi").addEventListener("click",function(){
+  var u=this.dataset.u,n=document.getElementById("pm");
+  try{window.top.location.href=u}catch(x){try{window.location.href=u}catch(y){}}
+  setTimeout(function(){if(document.visibilityState==="visible")n.textContent="If your UPI app did not open, tap Copy UPI ID, pay ₹1 in your UPI app, then come back and tap the last button."},1800);
+ });
+ document.getElementById("cu").addEventListener("click",function(){
+  var n=document.getElementById("pm"),ok=function(){n.textContent="UPI ID copied: "+UPI_ID+". Open your UPI app, pay ₹1 to it, then come back."};
+  try{navigator.clipboard.writeText(UPI_ID).then(ok,function(){n.textContent="Pay ₹1 to UPI ID "+UPI_ID})}catch(x){n.textContent="Pay ₹1 to UPI ID "+UPI_ID}
+ });
+ document.getElementById("back").addEventListener("click",function(){document.getElementById("pay").hidden=true;document.getElementById("f").hidden=false;setStep(1)});
+ document.getElementById("paid").addEventListener("click",function(){
+  var u=document.getElementById("utr").value.trim();
+  go(pending+"\nOP fee: Rs 1 paid by UPI\nUPI transaction ID: "+(u||"not entered"));
+ });
+ document.getElementById("cp").addEventListener("click",function(){
+  var t=document.getElementById("txt"),n=document.getElementById("cpm");t.select();
+  try{navigator.clipboard.writeText(t.value).then(function(){n.textContent="Copied. Now paste it in WhatsApp."},function(){document.execCommand("copy");n.textContent="Copied. Now paste it in WhatsApp."})}catch(x){try{document.execCommand("copy");n.textContent="Copied. Now paste it in WhatsApp."}catch(y){n.textContent="Press and hold the message to copy it."}}
+ });
+ f.d.min=new Date().toISOString().slice(0,10);
+ f.addEventListener("submit",function(e){
+  e.preventDefault();
+  var why=dept==="Orthopedic"?"Problem area: "+f.o.value:"Reason: "+f.g.value;
+  var m="Hello, I would like to book an OP at Sandy Ortho and Gynic.\nDepartment: "+dept+"\nPatient: "+f.n.value+"\nAge: "+f.a.value+"\nMobile: "+f.m.value+"\nVisit type: "+f.t.value+"\nPreferred date: "+f.d.value+"\nPreferred time: "+f.s.value+"\n"+why+(f.x.value?"\nDetails: "+f.x.value:"");
+  pending=m;
+  if(!UPI_ID){go(m);return}
+  document.getElementById("upiid").textContent=UPI_ID;
+  document.getElementById("upi").dataset.u="upi://pay?pa="+encodeURIComponent(UPI_ID)+"&pn="+encodeURIComponent("Sandy Ortho and Gynic")+"&am=1&cu=INR&tn="+encodeURIComponent("OP fee");
+  var pay=document.getElementById("pay");pay.hidden=false;document.getElementById("f").hidden=true;setStep(2);pay.scrollIntoView();
+ });
+})();
+</script>
+</body>
+</html>
